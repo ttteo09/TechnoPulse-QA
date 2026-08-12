@@ -14,3 +14,14 @@ An end-to-end Full-Stack QA Automation Framework built in Python for **TechnoPul
 - **CI/CD Pipeline:** GitHub Actions (Ubuntu runner)
 
 ## 📁 Project Structure
+
+TechnoPulse-QA/
+├── .github/workflows/
+│   └── tests.yml            # CI/CD Pipeline configuration
+├── test_upload.py           # Header validation & BPM parameterization
+├── test_api_upload.py       # API endpoints & HTTP status mocking
+├── test_audio_engine.py     # Librosa & DSP beat detection
+├── test_ui_deck.py          # Playwright E2E UI tests
+├── locustfile.py            # Performance & load testing script
+├── index.html               # Virtual DJ Deck UI mockup
+└── requirements.txt         # Project dependencies
