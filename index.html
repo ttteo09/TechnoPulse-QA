@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>TechnoPulse DJ Deck</title>
+    <style>
+        body { background-color: #121212; color: #fff; font-family: sans-serif; padding: 20px; }
+        .deck { border: 2px solid #00ffcc; padding: 20px; width: 250px; display: inline-block; margin: 10px; }
+        button { background: #00ffcc; border: none; padding: 10px 15px; font-weight: bold; cursor: pointer; }
+        .active { background: #ff0055; color: white; }
+    </style>
+</head>
+<body>
+<h1>TechnoPulse Virtual DJ</h1>
+
+<div class="deck" id="deck-a">
+    <h2>Deck A</h2>
+    <p>BPM: <span id="bpm-a">140</span></p>
+    <button id="play-a" onclick="togglePlay('play-a')">PLAY</button>
+</div>
+
+<div class="deck" id="deck-b">
+    <h2>Deck B</h2>
+    <p>BPM: <span id="bpm-b">128</span></p>
+    <button id="play-b" onclick="togglePlay('play-b')">PLAY</button>
+    <button id="sync-b" onclick="syncBpm()">SYNC</button>
+</div>
+
+<script>
+    function togglePlay(id) {
+        document.getElementById(id).classList.toggle('active');
+    }
+    function syncBpm() {
+        let bpmA = document.getElementById('bpm-a').innerText;
+        document.getElementById('bpm-b').innerText = bpmA;
+    }
+</script>
+</body>
+</html>

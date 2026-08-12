@@ -1,0 +1,3 @@
+echo venv/ > .gitignore
+echo .pytest_cache/ >> .gitignore
+echo report.html >> .gitignore
